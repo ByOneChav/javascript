@@ -41,7 +41,7 @@
   var d = c;
   console.log(c);
   console.log(d);
-  
+
   var x = 9; // Inicializar la variable
   var miIdioma = "English";
   var r;  // Variable no inicializada
@@ -50,35 +50,35 @@
   /*
   SUMA
   */
-  var suma = 7+12;
+  var suma = 7 + 12;
   console.log(suma);
 
   /*
   RESTA
   */
-  var resta = 15-5;
+  var resta = 15 - 5;
   console.log(resta);
 
   /*
   MULTIPLICACION
   */
-  var producto = 5*4;
+  var producto = 5 * 4;
   console.log(producto);
 
-  producto = 9*0;
+  producto = 9 * 0;
   console.log(producto);
 
 
   /*
   DIVISION
   */
-  var cociente = 20/2;
+  var cociente = 20 / 2;
   console.log(cociente);
 
-  cociente = 17/31;
+  cociente = 17 / 31;
   console.log(cociente);
 
-  cociente = 3/0;
+  cociente = 3 / 0;
   console.log(cociente);
 
   /*
@@ -90,22 +90,22 @@
   /*
   MULTIPLICAR NUMEROS DECIMALES
   */
-  var prod = 3.4*10.4;
+  var prod = 3.4 * 10.4;
   console.log(prod);
 
   // DIVIDIR NUMEROS DECIMALES
-  var dividir = 5.0/2.0;
+  var dividir = 5.0 / 2.0;
   console.log(dividir);
 
   // RESTO DE UNA DIVISION
-  var resto = 15%2;
+  var resto = 15 % 2;
   console.log(resto);
 
   // INCREMENTAR EL VALOR DE UNA VARIABLE
-  var librosComprados =  105;
+  var librosComprados = 105;
   console.log(librosComprados);
 
-  librosComprados = librosComprados +1;
+  librosComprados = librosComprados + 1;
   console.log(librosComprados);
 
   librosComprados += 2;
@@ -118,7 +118,7 @@
   var numeroDeEstudiantes = 256;
   console.log(numeroDeEstudiantes);
 
-  numeroDeEstudiantes = numeroDeEstudiantes-2;
+  numeroDeEstudiantes = numeroDeEstudiantes - 2;
   console.log(numeroDeEstudiantes);
 
   numeroDeEstudiantes--;
@@ -191,13 +191,13 @@
   console.log(tabulacion);
 
   // CONCATENAR CADENAS DE CARACTERES
-  var nombreCompleto = "One "+"Chavarria";
+  var nombreCompleto = "One " + "Chavarria";
   console.log(nombreCompleto);
 
   // CONSTRUIR CADENAS CON VARIABLES
   var nombre1 = "One";
   var nombre2 = " Chavarria";
-  var nombreCompleto = nombre1+nombre2;
+  var nombreCompleto = nombre1 + nombre2;
   console.log(nombreCompleto);
 
   // AGREGAR VARIABLESA CADENAS DE CARACTERES
@@ -221,7 +221,7 @@
   console.log(miCadenaInmutable);
 
   miCadenaInmutable[0] = "H"; // Error
-  
+
   // NOTACION DE CORCHETES: ENÉSIMO CARACTER
   var miCadena = "OneChav";
   console.log(miCadena[5]);
@@ -233,14 +233,14 @@
   // NOTACION DEE CORCHETES: DE DERECHA A IZQUIERDA
   var miCadena = "JavaScript";
   var n = 2;
-  console.log(miCadena[miCadena.length -n]);
+  console.log(miCadena[miCadena.length - n]);
 
   // PALABRAS EN BLANCO
   var miSustantivo = "perro";
   var miAdjetivo = "negro";
   var miVerbo = "corrió";
   var miAdverbio = "rápidamente";
-  var palabrasEnBlanco = "El "+miSustantivo+" "+miAdjetivo+" "+miVerbo+" "+miAdverbio+" a la tienda.";
+  var palabrasEnBlanco = "El " + miSustantivo + " " + miAdjetivo + " " + miVerbo + " " + miAdverbio + " a la tienda.";
 
   console.log(palabrasEnBlanco);
 
@@ -260,17 +260,315 @@
   console.log(miArreglo[2]);
 
   // MODIFICAR ELEMENTOS DE UN ARREGLO
-  var miArreglo = [10,, 20, 40, 60];
+  var miArreglo = [10, , 20, 40, 60];
   miArreglo[0] = "ByOne";
   console.log(miArreglo);
 
   // ACCEDER A ARREGLOS MULTIDIMENSIONALES
-  
+  var miArreglo = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+  console.log(miArreglo[0]);
+  console.log(miArreglo[1]);
+
+  console.log(miArreglo[0][0]); // accediendo al indice interno del arreglo 3
+  console.log(miArreglo[0][1]);
+
+  // METODO .PUSH()
+  var estaciones = ["Invierno", "Otoño", "Primavera"];
+  estaciones.push("Verano");  // agregar elemento al final del arreglo
+  console.log(estaciones);
+
+  // METODO .POP()
+  var estations;
+  var estacion;
+  estations = ["Invierno", "Otoño", "Primavera", "Verano"];
+  estacion = estations.pop(); // elimina el ultimo elemento del arreglo
+  console.log(estations);
+  console.log(estacion);
+
+  // METODO .SHIFT()
+  var estaciones = ["Invierno", "Otoño", "Primavera", "Verano"];
+  estaciones.shift();  // elimina el primer elemento del arreglo
+  console.log(estaciones);
+
+  // METODO .UNSHIFT()
+  var estaciones = ["Invierno", "Otoño", "Primavera"];
+  estaciones.unshift("Verano"); // agregar al principio del arreglo
+  console.log(estaciones);
+
+  // LISTA DE COMPRAS
+  var miListaDeCompras = [["cereal", 3], ["leche", 2], ["galletas", 4], ["pan", 5], ["refresco", 7], ["pollo", 7]];
+  console.log("Voy a comprar " + miListaDeCompras[2][1] + " unidades de " + miListaDeCompras[2][0] + ".");
+
+  // FUNCIONES
+  function mostrarMensaje() {
+    console.log("¡Hola, Mundo!")
+  }
+  mostrarMensaje();
+  mostrarMensaje();
+  mostrarMensaje();
+
+  // PARÁMETROS Y ARGUMENTOS
+  function sumar(num1, num2) {
+    var suma = num1 + num2;
+    console.log("El sultado de " + num1 + " + " + num2 + " es: " + suma);
+  }
+  var a = 4;
+  var b = 8;
+  sumar(9, 6);
+  sumar(7, 7);
+  sumar(19, 1);
+  sumar(a, b);
+
+  function concatenarTresCadenas(cadena1, cadena2, cadena3) {
+    console.log(cadena1 + " " + cadena2 + " " + cadena3);
+  }
+  concatenarTresCadenas("Estoy", "aprendiendo", "a programar.")
+
+  // ÁMBITO GLOBAL Y VARIABLES GLOBALES
+  var miVariableGlobal = 5;
+  console.log(miVariableGlobal);
+  function miFuncion() {
+    console.log(miVariableGlobal);
+  }
+  miFuncion();
+  console.log(miVariableGlobal);
+
+  // ÁMBITO LOCAL Y VARIABLES LOCALES
+  function miFuncion() {
+    var miVariableLocal = 4;
+    console.log(miVariableLocal);
+  }
+  // miFuncion();
+  // console.log(miVariableLocal);
 
 
+  // ÁMBITO GLOBAL VS. ÁMBITO LOCAL
+  var miNombre = "OneChav";
+  function mostraMiNombre() {
+    var miNombre = "Gino";
+    console.log(miNombre);
+  }
+  mostraMiNombre();
+  console.log(miNombre);
+
+  // RETORNAR UN VALOR
+  function sumar(a, b) {
+    return a + b;
+  }
+  console.log("La suma es: " + sumar(3, 2));
+
+  // UNDEFINED
+  function sumar(a, b) {
+    console.log(a + b);
+  }
+  console.log(sumar(5, 3));
+
+  // ASIGNAR UN VALOR RETORNADO A UNA VARIABLE
+  function sumar(a, b) {
+    return a * b;
+  }
+  var resultado = sumar(4, 4);
+  console.log(resultado);
 
 
+  function crearCadenaConMeta(lenguajeDeProgramacion) {
+    return "Mi meta es aprender " + lenguajeDeProgramacion;
+  }
 
+  var miMeta = crearCadenaConMeta("JavaScript");
+  console.log(miMeta);
+
+  // PERMANECE EN FILA
+  function proximoEnLaFila(arreglo, elemento) {
+    arreglo.push(elemento); // agregar al final del arreglo
+    return arreglo.shift(); // removero el primer elemento
+
+  }
+  var miArreglo = [1, 2, 3, 4, 5, 6];
+  console.log("Antes: " + JSON.stringify(miArreglo));
+  console.log(proximoEnLaFila(miArreglo, 7));
+  console.log("Después: " + JSON.stringify(miArreglo));
+
+  // VALORES BOOLEANOS
+  console.log(true);
+  console.log(false);
+  console.log("")
+
+  // OPERADOR DE IGUALDAD
+  console.log(5 == 5);
+  console.log("hola" == "hola");
+  console.log("One" == "one");
+  console.log("")
+
+  // OPERADOR DE IGUALDAD ESTRICTA
+  console.log(9 == 9)
+  console.log(9 == "9")
+  console.log(9 === 9) // estricta
+  console.log(9 === "9") // estricta
+  console.log("")
+
+  // PRACTICA CÓMO COMPARAR VALORES
+  var a;
+  var b;
+  a = 5;
+  b = 5;
+  console.log(a == b);
+  console.log(a === b);
+  b = 8;
+  console.log(a == b);
+  console.log(a === b);
+  b = "5";
+  console.log(a == b);
+  console.log(a === b);
+  console.log("")
+
+  // OPERADOR DE DESIGUALDAD
+  console.log(9 != 6);
+  console.log(9 != 9);
+  console.log("JavaScript" != "JavaScript");
+  console.log([1, 2, 3] != [1, 2, 3]);
+  console.log("")
+
+
+  // OPERADOR DE DESIGUALDAD ESTRICTA
+  console.log(1 != "1");
+  console.log(1 !== "1");
+  console.log("")
+
+  // OPERADOR MAYOR QUE
+  console.log(6 > 5);
+  console.log(3 > 5);
+  console.log("B" > "A");
+  console.log("ACB" > "ABC");
+  console.log("")
+
+  // OPERADOR MAYOR O IGUAL QUE
+  console.log(5 > 5);
+  console.log(5 >= 5);
+  console.log("")
+
+  // OPERADOR MENOR QUE
+  console.log(5 < 6);
+  console.log(10 < 3);
+  console.log("A" < "B");
+  var a = 6;
+  var b = 2;
+  console.log(a < b);
+  console.log("")
+
+  // OPERADOR MENOR O IGUAL QUE
+  console.log(5 < 5);
+  console.log(5 <= 5);
+  console.log("")
+
+  // OPERADOR LÓGICO (AND)
+  console.log(true && true);
+  console.log(true && false);
+  console.log(false && false);
+  console.log(false && false);
+  var a = 8;
+  console.log((a > 5) && (a < 10));
+  console.log((a < 10) && (a > 10));
+  console.log("");
+
+  // OPERADOR LÓGICO (OR)
+  console.log(true || true);
+  console.log(true || false);
+  console.log(false || true);
+  console.log(false || false);
+  var a = 8;
+  console.log((a < 5) || (a > 15));
+  console.log((a < 2) || (a > 2));
+  console.log("")
+
+  // OPERADOR LÓGICO (NOT)
+  console.log(!true);
+  console.log(!false);
+  var a = 8;
+  console.log(!(a > 5));
+  console.log(!(a < 5));
+  console.log("");
+
+  // SENTENCIAS CONDICIONALES
+  var x = 5;
+  if (x > 2) {
+    console.log("LA CONDICION ES VERDADERA :)");
+  }
+  var estacion = "Invierno";
+  if (estacion == "Invierno") {
+    console.log("¡Si! Me encanta el invierno.");
+  }
+  console.log("");
+
+  // CLÁUSULA (ELSE)
+  if (false) {
+    console.log("La condicion es verdadera.");
+  } else {
+    console.log("La condicion es falsa.");
+  }
+
+  var y = 5;
+  if (y < 2) {
+    console.log("La condicion es verdadera.");
+  } else {
+    console.log("La condicion es falsa.");
+  }
+  var estacion = "Invierno";
+  if (estacion === "Verano") {
+    console.log("Comenzó el verano. Ya podemos ir a la playa")
+  } else {
+    console.log("Ya quiero que llegue el verano para poder ir a la playa")
+  }
+  console.log("");
+
+  // CLÁUSULA (ELSE IF)
+  function clasificarValorYa(valor) {
+    if (valor % 2 == 0) {
+      console.log("Divisible entre 2");
+    } else if (valor % 3 == 0) {
+      console.log("Divisible entre 3");
+    } else {
+      console.log("No es divisible entre las opciones");
+    }
+  }
+  clasificarValorYa(2);
+  clasificarValorYa(15);
+  clasificarValorYa(1);
+  console.log("");
+
+  // CONDICIONALES: ORDEN LÓGICO
+  function clasificarValor(valor){
+    if(valor < 5){
+      console.log("Menor que 5");
+    }else if(valor < 10){
+      console.log("Menor que 10");
+    }else {
+      console.log("Mayor o igual a 10");
+    }
+  }
+  clasificarValor(2);
+  clasificarValor(7);
+  clasificarValor(17);
+  console.log("");
+
+  // ENCADENAR SENTENCIAS (IF ... ELSE)
+  function interpretarIMC(indiceDeMasaCorporal){
+    if (indiceDeMasaCorporal < 18.5){
+      console.log("BAJO PESO");
+    }else if (indiceDeMasaCorporal <= 24.9){
+      console.log("NORMAL");
+    }else if (indiceDeMasaCorporal <= 29.9){
+      console.log("SOBREPESO");
+    }else{
+      console.log("OBESO");
+    }
+  }
+  interpretarIMC(17.8);
+  interpretarIMC(23.4);
+  interpretarIMC(28.9);
+  interpretarIMC(31.9);
+
+  // CÓDIGO DE GOLF
 
 
 
