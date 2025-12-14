@@ -1,0 +1,277 @@
+<script>
+  console.log("Hola, mundo");
+  // comentario de una sola linea
+
+  /* Este es comentario
+  de varias lineas
+  en javascript */
+
+  /*
+  Tipos de Datos:
+  undefined, null, boolean, string, symbol, number, y object.
+  */
+  var miVariable = "ByOneChav";
+  console.log(miVariable);
+
+  miVariable = 1615;
+  console.log(miVariable);
+
+  miVariable = false;
+  console.log(miVariable);
+
+  miVariable = null;
+  console.log(miVariable);
+
+  /*
+  Operadores de Asignación
+  */
+  var a;
+  var b = 2;
+  console.log(a); // Error
+  console.log(b); // Tiene un valor
+
+
+  a = 10;  // = es el operador de asignacion en JavaScript
+  console.log(a);
+
+  /*
+  ASIGNAR EL VALOR DE UNA VARIABLE A OTRA VARIABLE
+  */
+  var c = 1516;
+  var d = c;
+  console.log(c);
+  console.log(d);
+  
+  var x = 9; // Inicializar la variable
+  var miIdioma = "English";
+  var r;  // Variable no inicializada
+  console.log(r);
+
+  /*
+  SUMA
+  */
+  var suma = 7+12;
+  console.log(suma);
+
+  /*
+  RESTA
+  */
+  var resta = 15-5;
+  console.log(resta);
+
+  /*
+  MULTIPLICACION
+  */
+  var producto = 5*4;
+  console.log(producto);
+
+  producto = 9*0;
+  console.log(producto);
+
+
+  /*
+  DIVISION
+  */
+  var cociente = 20/2;
+  console.log(cociente);
+
+  cociente = 17/31;
+  console.log(cociente);
+
+  cociente = 3/0;
+  console.log(cociente);
+
+  /*
+  NUMEROS DECIMALES
+  */
+  var miNumeroDecimal = 23.4;
+  var peso = 78.89;
+
+  /*
+  MULTIPLICAR NUMEROS DECIMALES
+  */
+  var prod = 3.4*10.4;
+  console.log(prod);
+
+  // DIVIDIR NUMEROS DECIMALES
+  var dividir = 5.0/2.0;
+  console.log(dividir);
+
+  // RESTO DE UNA DIVISION
+  var resto = 15%2;
+  console.log(resto);
+
+  // INCREMENTAR EL VALOR DE UNA VARIABLE
+  var librosComprados =  105;
+  console.log(librosComprados);
+
+  librosComprados = librosComprados +1;
+  console.log(librosComprados);
+
+  librosComprados += 2;
+  console.log(librosComprados);
+
+  librosComprados++;
+  console.log(librosComprados);
+
+  // REDUCIR EL VALOR DE UNA VARIBLE
+  var numeroDeEstudiantes = 256;
+  console.log(numeroDeEstudiantes);
+
+  numeroDeEstudiantes = numeroDeEstudiantes-2;
+  console.log(numeroDeEstudiantes);
+
+  numeroDeEstudiantes--;
+  console.log(numeroDeEstudiantes);
+
+
+  // ASIGNACION DE SUMA
+  var asignarSuma = 23;
+  asignarSuma += 3;
+  console.log(asignarSuma);
+
+  // ASIGNACION DE RESTA
+  var asignarResta = 23;
+  console.log(asignarResta);
+  asignarResta -= 4;
+  console.log(asignarResta);
+
+  // ASIGNACION DE MULTIPLICACION
+  var multi = 23;
+  console.log(multi);
+  multi *= 3;
+  console.log(multi);
+
+  // ASIGNACION DE DIVISION
+  var divi = 34;
+  console.log(divi);
+  divi /= 3;
+  console.log(divi);
+
+
+  // VARIABLES CON CADENAS DE CARACTERES
+  var nombre = "ByOneChav";
+  console.log("My surname in GitHub is: ", nombre.toUpperCase());
+
+  // ESCAPAR COMILLAS EN CADENAS DE CARACTERES
+  var miCadena = "Soy una cadena de caracteres \"con comillas\"";
+  console.log(miCadena);
+
+  // CADENAS DE CARACTERES CON COMILLAS SIMPLES
+  var miMeta;
+  miMeta = 'Aprender el lenguaje de programacion "JavaScript"';
+  console.log(miMeta);
+  miMeta = 'Aprender el framework "React"';
+  console.log(miMeta)
+
+
+  /*
+  SECUENCIAS DE ESCAPE
+  \'  comillas simples
+  \"  comillas dobles
+  \\  barra invertida
+  \n  linea nueva
+  \r  Retorno de carro
+  \t  tabulacion
+  \b  retroceso
+  \f  salto de pagina
+  ...
+  */
+
+  var barraInvertida = "\\barra invertida";
+  console.log(barraInvertida);
+
+  var lineaNueva = "\nlinea nueva";
+  console.log(lineaNueva);
+
+  var retornoCarro = "\rretorno de carro";
+  console.log(retornoCarro);
+
+  var tabulacion = "\ttabulacion";
+  console.log(tabulacion);
+
+  // CONCATENAR CADENAS DE CARACTERES
+  var nombreCompleto = "One "+"Chavarria";
+  console.log(nombreCompleto);
+
+  // CONSTRUIR CADENAS CON VARIABLES
+  var nombre1 = "One";
+  var nombre2 = " Chavarria";
+  var nombreCompleto = nombre1+nombre2;
+  console.log(nombreCompleto);
+
+  // AGREGAR VARIABLESA CADENAS DE CARACTERES
+  var mensajeCompleto = "Estoy aprendiendo a programar ";
+  var parteFinal = "con freedCodeCamp";
+  console.log(mensajeCompleto);
+
+  mensajeCompleto += parteFinal;
+  console.log(mensajeCompleto);
+
+  // LONGITUD DE UNA CADENA DE CARACTERES
+  var miCadena = "OneChav";
+  console.log(miCadena.length);
+
+  // NOTACION DE CORCHETES: PRIMER CARACTER
+  var lenguajeDeProgramacion = "JavaScript";
+  console.log(lenguajeDeProgramacion[0]);
+
+  // INMUTABILIDAD DE CADENAS DE CARACTERES
+  var miCadenaInmutable = "Jola, Mundo";
+  console.log(miCadenaInmutable);
+
+  miCadenaInmutable[0] = "H"; // Error
+  
+  // NOTACION DE CORCHETES: ENÉSIMO CARACTER
+  var miCadena = "OneChav";
+  console.log(miCadena[5]);
+
+  // NOTACION DE CORCHETES: ULTIMO CARACTER
+  var miCadena = "ByOneChav";
+  console.log(miCadena[miCadena.length - 1])
+
+  // NOTACION DEE CORCHETES: DE DERECHA A IZQUIERDA
+  var miCadena = "JavaScript";
+  var n = 2;
+  console.log(miCadena[miCadena.length -n]);
+
+  // PALABRAS EN BLANCO
+  var miSustantivo = "perro";
+  var miAdjetivo = "negro";
+  var miVerbo = "corrió";
+  var miAdverbio = "rápidamente";
+  var palabrasEnBlanco = "El "+miSustantivo+" "+miAdjetivo+" "+miVerbo+" "+miAdverbio+" a la tienda.";
+
+  console.log(palabrasEnBlanco);
+
+  // ARREGLOS (Arrays)
+  var miArreglo = ["By", "OneChav", 28];
+  console.log(miArreglo);
+
+  var estudiantes = ["Bastian", "Pablo", "Pia", "Luciano", "One"];
+  console.log(estudiantes);
+
+  // ARREGLOS ANIDADOS
+  var listaDeEstudiantes = [["Nora", 48.9], ["One", 6.5], ["Chino", 6], ["Matias", 5.9]];
+  console.log(listaDeEstudiantes);
+
+  // ACCEDER A LOS ELEMENTOS DE UN ARREGLO
+  var miArreglo = [10, 20, 30];
+  console.log(miArreglo[2]);
+
+  // MODIFICAR ELEMENTOS DE UN ARREGLO
+  var miArreglo = [10,, 20, 40, 60];
+  miArreglo[0] = "ByOne";
+  console.log(miArreglo);
+
+  // ACCEDER A ARREGLOS MULTIDIMENSIONALES
+  
+
+
+
+
+
+
+
+
+</script>
