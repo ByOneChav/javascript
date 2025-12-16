@@ -537,12 +537,12 @@
   console.log("");
 
   // CONDICIONALES: ORDEN LÓGICO
-  function clasificarValor(valor){
-    if(valor < 5){
+  function clasificarValor(valor) {
+    if (valor < 5) {
       console.log("Menor que 5");
-    }else if(valor < 10){
+    } else if (valor < 10) {
       console.log("Menor que 10");
-    }else {
+    } else {
       console.log("Mayor o igual a 10");
     }
   }
@@ -552,14 +552,14 @@
   console.log("");
 
   // ENCADENAR SENTENCIAS (IF ... ELSE)
-  function interpretarIMC(indiceDeMasaCorporal){
-    if (indiceDeMasaCorporal < 18.5){
+  function interpretarIMC(indiceDeMasaCorporal) {
+    if (indiceDeMasaCorporal < 18.5) {
       console.log("BAJO PESO");
-    }else if (indiceDeMasaCorporal <= 24.9){
+    } else if (indiceDeMasaCorporal <= 24.9) {
       console.log("NORMAL");
-    }else if (indiceDeMasaCorporal <= 29.9){
+    } else if (indiceDeMasaCorporal <= 29.9) {
       console.log("SOBREPESO");
-    }else{
+    } else {
       console.log("OBESO");
     }
   }
@@ -567,8 +567,240 @@
   interpretarIMC(23.4);
   interpretarIMC(28.9);
   interpretarIMC(31.9);
+  console.log("");
 
   // CÓDIGO DE GOLF
+  function puntajeDeGolf(par, golpes) {
+    if (golpes == 1) {
+      return "Hole-in-one";
+    } else if (golpes <= par - 2) {
+      return "Eagle";
+    } else if (golpes == par - 1) {
+      return "Birdie";
+    } else if (golpes == par) {
+      return "Par";
+    } else if (golpes == par + 1) {
+      return "Bogey";
+    } else if (golpes == par + 2) {
+      return "Double Bogey";
+    } else if (golpes >= par + 3) {
+      return "Go Home!";
+    }
+  }
+  console.log(puntajeDeGolf(4, 1));
+
+  // SENTENCIAS SWTICH
+  function clasificarBalor(valor) {
+    var respuesta;
+    switch (valor) {
+      case 1:
+        respuesta = "alpha";
+        break;
+      case 2:
+        respuesta = "beta";
+        break;
+      case 3:
+        respuesta = "gamma";
+        break;
+      case 4:
+        respuesta = "delta";
+        break;
+    }
+    return respuesta;
+  }
+  console.log(clasificarBalor(2));
+  console.log("");
+
+  var producto = "hamburguesa";
+  switch (producto) {
+    case "pizza":
+      console.log("La pizza basica cuesta $10.55");
+      break;
+    case "hamburguesa":
+      console.log("La hambuerguesas cuestan $6.78");
+      break;
+    case "helado":
+      console.log("El helado cuesta $2.80");
+      break;
+  }
+  console.log("");
+
+  // SENTENCIAS SWTICH: OPCION PREDETERMINADA
+  function seleccionarIdioma(valor) {
+    var idioma;
+    switch (valor) {
+      case 1:
+        idioma = "ESPAÑOL";
+        break;
+      case 2:
+        idioma = "FRANCES";
+        break;
+      case 3:
+        idioma = "ITALIANO";
+        break;
+      case 4:
+        idioma = "PORTUGUES";
+        break;
+      default:
+        idioma = "INGLES";
+        break;
+    }
+    return idioma;
+  }
+  console.log(seleccionarIdioma(0));
+  console.log("");
+
+  // SENTENCIAS SWTICH: MULTIPLES CASOS
+  function clasificarVolumen(valor) {
+    var volumen;
+    switch (valor) {
+      case 1:
+        volumen = "Bajo";
+        break;
+      case 2:
+      case 3:
+        volumen = "Intermedio";
+        break;
+      case 4:
+      case 5:
+      case 6:
+        volumen = "Alto";
+        break;
+    }
+    return volumen;
+  }
+  console.log(clasificarVolumen(3))
+
+  // REEMPLAZAR "IF...ELSE" POR "SWITCH"
+  function seleccionarLenguage(valor) {
+    var idioma;
+    switch (valor) {
+      case 1:
+        idioma = "Español";
+        break;
+      case 2:
+        idioma = "Frances";
+        break;
+      case 3:
+        idioma = "Italiano";
+        break;
+      default:
+        idioma = "Ingles";
+        break;
+    }
+    return idioma;
+  }
+  console.log("");
+
+  // RETORNAR VALORES BOOLEANOS
+  function esMenorQue(a, b) {
+    return a < b;
+  }
+  console.log(esMenorQue(3, 6));
+  console.log("");
+
+  // PATRÓN DE RETORNO ANTICIPADO
+  function myFunction() {
+    console.log("HOla");
+    return "Mundo";
+    console.log("Adios");
+  }
+  console.log(myFunction());
+  console.log("");
+
+  function calcularRaizCuadrada(num) {
+    if (num < 0) {
+      return undefined;
+    }
+    return Math.sqrt(num);
+  }
+  console.log(calcularRaizCuadrada(9));
+  console.log("");
+
+  // CONTEO DE CARTAS
+
+  // CREAR OBJETOS
+  var miPerro = {
+    "nombre": "Hino",
+    "edad":4,
+    "peso":7.4,
+    "raza":"Beagle"
+  };
+
+  // ACCEDER A PROPIEDADES: NOTACION DE PUNTO
+  var miPerro = {
+    "nombre": "Hino",
+    "edad":4,
+    "peso":7.4,
+    "raza":"Beagle"
+  };
+  console.log(miPerro.nombre);
+  console.log("");
+
+  // ACCEDER A PROPIEDADES: NOTACION DE CORCHETES
+  var miCuaderno = {
+    "color": "verde",
+    "categoria": "3",
+    "numero de paginas": 200,
+    "numero de hojas": 160
+  };
+  console.log(miCuaderno["numero de hojas"]); // accede tanto a una propiedad de una sola palabra, sobre todo es para mas de 1 palabra.
+  console.log("");
+
+  // ACCEDER A PROPIEDADES: VARIABLES
+  var resultados = {
+    1: "nota245",
+    2: "gino12",
+    3: "one1615",
+    4: "bar01"
+  };
+  var posicion = 3;
+  console.log(resultados[posicion]);
+  console.log(resultados["3"]);
+  console.log("");
+
+  // ACTUALIZAR PROPIEDADES
+  var mochila = {
+    "color": "azul",
+    "tamaño": "mediano",
+    "contenido": ["botella de agua", "cuaderno", "lapiz"]
+  };
+  console.log(mochila.color);
+  mochila.color = "rojo";
+  console.log(mochila.color);
+  console.log(mochila.contenido);
+  mochila.contenido.push("borrador");
+  console.log(mochila.contenido);
+  console.log("");
+  
+  // AGREGAR PROPIEDADES
+  var curso = {
+    "titulo": "Aprende JavaScript desde cero",
+    "idioma": "Español",
+    "duracion": 280
+  };
+  curso.vistas = 1807;
+  console.log(curso.vistas);
+  curso["vistas"] = 1907;
+  console.log(curso.vistas);
+  console.log("");
+  
+  // ELIMINAR PROPIEDADES
+  var curso = {
+    "titulo": "Aprende JavaScript desde cero",
+    "idioma": "Español",
+    "duracion": 280
+  };
+  console.log(curso.duracion);
+  delete curso.duracion;
+  console.log(curso.duracion);
+  console.log(curso);
+
+  // OBJETOS PARA BUSQUEDAS
+
+  // VERIFICAR PROPIEDADES
+
+  // OBJETOS COMPLEJOS
 
 
 
