@@ -795,12 +795,194 @@
   delete curso.duracion;
   console.log(curso.duracion);
   console.log(curso);
+  console.log("");
 
   // OBJETOS PARA BUSQUEDAS
+  function buscarElementoQuimico(simbolo){
+    var elementoQuimico = "";
+    switch (simbolo){
+      case "Al":
+        elementoQuimico = "Aluminio";
+        break;
+      case "S":
+        elementoQuimico = "Azufre";
+        break;
+      case "Cl":
+        elementoQuimico = "Cloro";
+        break;
+      case "He":
+        elementoQuimico = "Helio";
+        break;
+      case "B":
+        elementoQuimico = "Boro";
+        break;
+      case "Li":
+        elementoQuimico = "Litio";
+        break;
+    }
+    return elementoQuimico;
+  };
+
+
+  function buscarElementoQuimico2(simbolo){
+    
+    var simboloQuimicos = {
+      "Al":"Aluminio",
+      "S":"Azufre",
+      "Cl":"Cloro",
+      "He":"Helio",
+      "Li":"Litio"
+    };
+    
+    return simboloQuimicos[simbolo];
+  };
+  console.log(buscarElementoQuimico2("Al"));
+  console.log(buscarElementoQuimico2("S"));
+  console.log(buscarElementoQuimico2("Cl"));
+  console.log(buscarElementoQuimico2("He"));
+  console.log(buscarElementoQuimico2("Li"));
+  console.log("");
 
   // VERIFICAR PROPIEDADES
+  var myCuaderno = {
+    "color":"verde",
+    "categoria":3,
+    "precio":3.46
+  };
+  console.log(myCuaderno.hasOwnProperty("color"));
+  console.log(myCuaderno.hasOwnProperty("origen"));
+  console.log("");
+
+  function verificarPropiedad(obj, propiedad){
+    if(obj.hasOwnProperty(propiedad)){
+      return "Propiedad: "+obj[propiedad];
+    }else{
+      return "El objeto no tiene esta propiedad";
+    };
+  };
+  console.log(verificarPropiedad(myCuaderno,"color"));
+  console.log(verificarPropiedad(myCuaderno,"origen"));
+  console.log("");
 
   // OBJETOS COMPLEJOS
+  var ordenesDePizzas = [
+    {
+      "tipo": "margarita",
+      "tamaño": "individual",
+      "precio": 5.68,
+      "toppings": [
+        "extra queso",
+        "champiñones",
+        "piña"
+      ],
+      "paraLlevar":true
+    },
+    {
+      "tipo": "cuatro quesos",
+      "tamaño": "familiar",
+      "precio": 23.68,
+      "toppings": [
+        "extra queso",
+        "pimenton"
+      ],
+      "paraLlevar":false
+    }
+  ];
+  console.log(ordenesDePizzas[0].tipo);
+  console.log(ordenesDePizzas[0]["tipo"]);
+  console.log(ordenesDePizzas[1]);
+  console.log("");
+
+  // OBJETOS ANIDADOS
+  var miReceta = {
+    "descripcion": "mi postre favorito",
+    "costo": 16.6,
+    "ingredientes": {
+      "masa": {
+        "harina": "100 grs",
+        "sal": "2 cucharadita",
+        "agua": "1 taza"
+      },
+      "cobertura": {
+        "azucar": "120 grs",
+        "chocolate": "4 cucharadas",
+        "mantequilla": "240 grs"
+      }
+    }
+  };
+  console.log(miReceta.descripcion);
+  console.log(miReceta.costo);
+  console.log(miReceta.ingredientes.masa);
+  console.log(miReceta.ingredientes.masa.harina);
+  console.log(miReceta.ingredientes.masa.sal);
+  console.log(miReceta.ingredientes.masa.agua);
+  console.log("");
+
+  // ARREGLOS ANIDADOS
+  var misPlatas = [
+    {
+      tipo: "flores",
+      lista: [
+        "rosas",
+        "tulipanes",
+        "dientes de leon"
+      ]
+    },
+    {
+      tipo: "arboles",
+      lista: [
+        "obeto",
+        "pino",
+        "abedul"
+      ]
+    }
+  ];
+  var primeraFlor = misPlatas[0].lista[0];
+  console.log(primeraFlor);
+  var segundoArbol = misPlatas[1].lista[1];
+  console.log(segundoArbol);
+  console.log("");
+
+  // COLECCION DE DISCOS
+
+  // CICLO WHILE
+  var i = 0;
+  while (i <= 7){
+    console.log("Hola Mundo");
+    i++;
+  };
+  console.log("");
+
+  var miArreglo = [];
+  var i = 0;
+  console.log(miArreglo);
+
+  while (i <= 10){
+    miArreglo.push(i);
+    i++;
+  };
+  console.log(miArreglo);
+  console.log("");
+
+  var numeros = [2,3,4,5,6,8,9,34];
+  while (numeros.length > 4){
+    numeros.pop();
+  }
+  console.log(numeros);
+
+
+  // CICLO FOR
+
+  // CICLOS FOR: NUMEROS IMPARES
+
+  // CICLOS FOR: CONTAR HACIA ATRAS
+
+  // ITERAR SOBRE UN ARREGLO CON UN CICLO FOR
+
+  // CICLOS FOR ANIDADOS
+
+  // CICLOS DO WHILE
+
 
 
 
