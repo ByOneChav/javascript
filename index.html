@@ -722,17 +722,17 @@
   // CREAR OBJETOS
   var miPerro = {
     "nombre": "Hino",
-    "edad":4,
-    "peso":7.4,
-    "raza":"Beagle"
+    "edad": 4,
+    "peso": 7.4,
+    "raza": "Beagle"
   };
 
   // ACCEDER A PROPIEDADES: NOTACION DE PUNTO
   var miPerro = {
     "nombre": "Hino",
-    "edad":4,
-    "peso":7.4,
-    "raza":"Beagle"
+    "edad": 4,
+    "peso": 7.4,
+    "raza": "Beagle"
   };
   console.log(miPerro.nombre);
   console.log("");
@@ -772,7 +772,7 @@
   mochila.contenido.push("borrador");
   console.log(mochila.contenido);
   console.log("");
-  
+
   // AGREGAR PROPIEDADES
   var curso = {
     "titulo": "Aprende JavaScript desde cero",
@@ -784,7 +784,7 @@
   curso["vistas"] = 1907;
   console.log(curso.vistas);
   console.log("");
-  
+
   // ELIMINAR PROPIEDADES
   var curso = {
     "titulo": "Aprende JavaScript desde cero",
@@ -798,9 +798,9 @@
   console.log("");
 
   // OBJETOS PARA BUSQUEDAS
-  function buscarElementoQuimico(simbolo){
+  function buscarElementoQuimico(simbolo) {
     var elementoQuimico = "";
-    switch (simbolo){
+    switch (simbolo) {
       case "Al":
         elementoQuimico = "Aluminio";
         break;
@@ -824,16 +824,16 @@
   };
 
 
-  function buscarElementoQuimico2(simbolo){
-    
+  function buscarElementoQuimico2(simbolo) {
+
     var simboloQuimicos = {
-      "Al":"Aluminio",
-      "S":"Azufre",
-      "Cl":"Cloro",
-      "He":"Helio",
-      "Li":"Litio"
+      "Al": "Aluminio",
+      "S": "Azufre",
+      "Cl": "Cloro",
+      "He": "Helio",
+      "Li": "Litio"
     };
-    
+
     return simboloQuimicos[simbolo];
   };
   console.log(buscarElementoQuimico2("Al"));
@@ -845,23 +845,23 @@
 
   // VERIFICAR PROPIEDADES
   var myCuaderno = {
-    "color":"verde",
-    "categoria":3,
-    "precio":3.46
+    "color": "verde",
+    "categoria": 3,
+    "precio": 3.46
   };
   console.log(myCuaderno.hasOwnProperty("color"));
   console.log(myCuaderno.hasOwnProperty("origen"));
   console.log("");
 
-  function verificarPropiedad(obj, propiedad){
-    if(obj.hasOwnProperty(propiedad)){
-      return "Propiedad: "+obj[propiedad];
-    }else{
+  function verificarPropiedad(obj, propiedad) {
+    if (obj.hasOwnProperty(propiedad)) {
+      return "Propiedad: " + obj[propiedad];
+    } else {
       return "El objeto no tiene esta propiedad";
     };
   };
-  console.log(verificarPropiedad(myCuaderno,"color"));
-  console.log(verificarPropiedad(myCuaderno,"origen"));
+  console.log(verificarPropiedad(myCuaderno, "color"));
+  console.log(verificarPropiedad(myCuaderno, "origen"));
   console.log("");
 
   // OBJETOS COMPLEJOS
@@ -875,7 +875,7 @@
         "champiñones",
         "piña"
       ],
-      "paraLlevar":true
+      "paraLlevar": true
     },
     {
       "tipo": "cuatro quesos",
@@ -885,7 +885,7 @@
         "extra queso",
         "pimenton"
       ],
-      "paraLlevar":false
+      "paraLlevar": false
     }
   ];
   console.log(ordenesDePizzas[0].tipo);
@@ -947,7 +947,7 @@
 
   // CICLO WHILE
   var i = 0;
-  while (i <= 7){
+  while (i <= 7) {
     console.log("Hola Mundo");
     i++;
   };
@@ -957,31 +957,320 @@
   var i = 0;
   console.log(miArreglo);
 
-  while (i <= 10){
+  while (i <= 10) {
     miArreglo.push(i);
     i++;
   };
   console.log(miArreglo);
   console.log("");
 
-  var numeros = [2,3,4,5,6,8,9,34];
-  while (numeros.length > 4){
+  var numeros = [2, 3, 4, 5, 6, 8, 9, 34];
+  while (numeros.length > 4) {
     numeros.pop();
   }
   console.log(numeros);
+  console.log("");
 
 
   // CICLO FOR
+  var miArreglo = [];
+  for (var i = 0; i < 10; i++) {
+    miArreglo.push(i);
+  };
+  console.log(miArreglo);
+
+  var miArreglo = [];
+  for (var i = 0; i < 10; i += 3) {
+    miArreglo.push(i);
+  };
+  console.log(miArreglo);
+  console.log("");
+
 
   // CICLOS FOR: NUMEROS IMPARES
+  var miNumeroImpares = [];
+  for (var i = 1; i <= 20; i += 2) {
+    miNumeroImpares.push(i);
+  };
+  console.log(miNumeroImpares);
+  console.log("");
 
   // CICLOS FOR: CONTAR HACIA ATRAS
+  for (var i = 15; i >= 10; i--) {
+    console.log(i);
+  };
+  console.log("");
+  var contarAtras = [];
+  for (var i = 20; i >= 15; i -= 1) {
+    console.log(i);
+  };
+  console.log("");
+
+  var contarAtras = [];
+  for (var i = 10; i > 0; i -= 2) {
+    contarAtras.push(i);
+  };
+  console.log(contarAtras);
+  console.log("");
 
   // ITERAR SOBRE UN ARREGLO CON UN CICLO FOR
+  var numerosPares = [4, 6, 8, 2];
+  var total = 0;
+  for (var i = 0; i < numerosPares.length; i++) {
+    console.log("Iteracion: " + i);
+    console.log(numerosPares[i]);
+
+    total += numerosPares[i];
+  };
+  console.log("La suma es: " + total);
+  console.log("");
+
+  var lenguajes = ["JavaScript", "Python", "Java", "C++", "Go"];
+  for (var i = 0; i < lenguajes.length; i++) {
+    console.log(lenguajes[i].toUpperCase());
+  };
+  console.log("");
+
+  function contarNumerosPares(arreglo) {
+    var total = 0;
+    for (var i = 0; i < arreglo.length; i++) {
+      if (arreglo[i] % 2 == 0) {
+        total++;
+      };
+    };
+    return total;
+  };
+  console.log(contarNumerosPares([5, 3, 1, 2]));
+  console.log("");
 
   // CICLOS FOR ANIDADOS
+  var miArreglo = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+  for (var i = 0; i < miArreglo.length; i++) {
+    console.log("> Nueva iteración");
+    var arregloAnidado = miArreglo[i]; // Arreglo
+    console.log("Arreglo: "+arregloAnidado);
+
+    for (var j = 0; j < arregloAnidado.length; j++){
+      console.log(">>> Ciclo anidado");
+      console.log("Elemento: "+arregloAnidado[j]);
+      console.log(arregloAnidado[j]); // Elemento
+    };
+  };
+  console.log("");
+  for (var i = 0; i < miArreglo.length; i++) {
+    var arregloAnidado = miArreglo[i]; // Arreglo
+    for (var j = 0; j < arregloAnidado.length; j++){
+      console.log(arregloAnidado[j]); // Elemento
+    };
+  };
+  console.log("");
 
   // CICLOS DO WHILE
+  var x  = 16;
+  do{
+    console.log(x);
+    x++;
+  } while(x < 10);
+  console.log("");
+
+  // BUSQUEDA DE PERFIL
+  var contactos = [
+    {
+      "nombre":"Nora",
+      "apellido":"Nav",
+      "numero":"0989788",
+      "gustos":["Pizza","Programacion"]
+    },
+    {
+      "nombre":"Harry",
+      "apellido":"Potter",
+      "numero":"8789788",
+      "gustos":["Hogwarts","Magia"]
+    },
+    {
+      "nombre":"Sherlock",
+      "apellido":"Holmes",
+      "numero":"908765",
+      "gustos":["Casos interasantes","Violin"]
+    }
+  ];
+
+  function buscarPerfil(nombre, propiedad){
+    for(var i = 0; i < contactos.length; i++){
+      if(contactos[i].nombre === nombre){
+        return contactos[i][propiedad] || "La propiedad no existe.";
+      };
+    };
+    return "El contacto no está en la lista.";
+  };
+  console.log(buscarPerfil("Nora", "gustos"));
+  console.log(buscarPerfil("Harry", "apellido"));
+  console.log(buscarPerfil("Harry", "numero"));
+  console.log(buscarPerfil("Sherlock", "direccion"));
+  console.log(buscarPerfil("Bob", "numero"));
+  console.log("");
+
+  // NUMEROS ALEAOTORIOS
+  function generarFraccionAleatoria(){
+    return Math.random(); // Entre [0, 1)
+  };
+  console.log("Numero generaro: "+generarFraccionAleatoria());
+  console.log("Numero generaro: "+generarFraccionAleatoria());
+  console.log("Numero generaro: "+generarFraccionAleatoria());
+  console.log("Numero generaro: "+generarFraccionAleatoria());
+  console.log("");
+
+
+  // NUMEROS ENTEROS ALEATORIOS
+  function numeroAleatorioEntre10y19(limiteSuperior){
+    return Math.floor(Math.random()*limiteSuperior);
+  };
+  for(var i = 0; i < 7; i++){
+    console.log(numeroAleatorioEntre10y19(200));
+  };
+  console.log("");
+
+  // NUMEROS ENTEROS ALEATORIOS EN UN RANGO
+  function rangoAleatorio(limiteInferior, limiteSuperior){
+    return Math.floor(Math.random() *(limiteSuperior-limiteInferior +1))+limiteInferior;
+  };
+  console.log(rangoAleatorio(5,10));
+  console.log(rangoAleatorio(5,10));
+  console.log(rangoAleatorio(5,10));
+  console.log("");
+
+  // FUNCION PARSEINT()
+  console.log(parseInt("90"));
+  console.log(parseInt("4.7"));
+  console.log(parseInt(3.9));
+
+  var a = parseInt("5");
+  var b = parseInt("7");
+  console.log(a+b);
+  console.log("");
+
+  // FUNCION PARSEINT() CON UNA BASE
+  console.log(parseInt("110111", 2));
+  console.log(parseInt("3E0A", 16));
+  console.log("");
+
+  // OPERADOR CONDICIONAL (TERNARIO)
+  function retornarMinimo(x,y){
+    return x < y ? x : y;  // condicional ternario
+  };
+  console.log(retornarMinimo(4,7));
+  console.log(retornarMinimo(8,2));
+  console.log(retornarMinimo(5,5));
+
+  var a = 5;
+  var b = 9;
+  console.log(a > b ? a+2 : b*3);
+  console.log("");
+
+  // MULTIPLES OPERADORES CONDICIONALES
+  function compararNumeros(a,b){
+    if (a == b){
+      return "a y b son iguales";
+    }else if(a > b){
+      return "a es mayor que b";
+    }else{
+      return "b es mayor que a";
+    };
+  };
+
+  function compararNumerosTernario(a,b){
+    return a == b? "a y b son iguales" 
+        : a > b? "a es mayor que b"
+        : "b es mayor que a";
+  };
+  console.log(compararNumerosTernario(11,27));
+  console.log(compararNumerosTernario(31,27));
+  console.log(compararNumerosTernario(27,27));
+  console.log("");
+
+  // VAR vs. LET
+  var campista = "James";
+  var campista = "David";
+  console.log(campista);
+
+  let name = "One";
+  name = "Alcindo";
+  console.log(name);
+  console.log("");
+
+  // AMBITO DE VAR vs. LET
+  var miVariableGlobal = 4;
+  console.log(miVariableGlobal);
+  function miFuncion(){
+    console.log(miVariableGlobal);
+    var miVaraibleLocal = 8;
+    console.log(miVaraibleLocal);
+  };
+  miFuncion();
+  console.log("");
+  //console.log(miVaraibleLocal); // index.html:1210 Uncaught ReferenceError: miVaraibleLocal is not defined
+  for (var i = 0; i < 3; i++){
+    console.log(i);
+  };
+  console.log("variable: "+i);
+  console.log("");
+
+  // CONST DE JAVASCRIPT
+  const MI_CONSTANTE = 45;
+  console.log(MI_CONSTANTE);
+  function calcularAreaCircular(radio){
+    const PI = 3.14;
+    if(radio < 0){
+      return undefined;
+    };
+    return PI * (radio ** 2);
+  };
+  console.log(calcularAreaCircular(-4));
+  console.log(calcularAreaCircular(10));
+  console.log("");
+
+  // MUTAR UN ARREGLO DECLARADO CON CONST
+  const MI_ARREGLO = [1,2,3,4];
+  console.log(MI_ARREGLO);
+  // MI_ARREGLO = [5,6,7,8] //Error
+  MI_ARREGLO[0] = 5;
+  MI_ARREGLO[1] = 6;
+  MI_ARREGLO[2] = 7;
+  MI_ARREGLO[3] = 8;
+  console.log(MI_ARREGLO);
+  console.log("");
+
+  // CREAR UN OBJETO INMUTABLE
+
+  // FUNCIONES FLECHA
+
+  // FUNCIONES FLECHA CON PARAMETROS
+
+  // VALORES POR DEFECTO PARA PARAMETROS
+
+  // OPERADOR REST
+
+  // OPERADOR SPREAD
+
+  // SINTAXIS DE DESTRUCTURACION
+
+  // SINTAXIS DE DESTRUCTURACION: OBJETOS ANIDADOS
+
+  // SINTAXIS DE DESTRUCTURACION: ARREGLOS
+
+  // SINTAXIS DE DESTRUCTURACION CON EL OPERADOR REST
+
+  // SINTAXIS DE DESTRUCTURACION: PASAR OBJETO COMO ARGUMENTO
+
+  // PLANTILLAS LITERALES
+
+  // CREAR OBJETOS DE FORMA CONCISA
+
+  // METODOS
+
+  // DEFINIR UNA CLASE
+
+  // GETTERS Y SETTERS
 
 
 
