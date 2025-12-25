@@ -1048,56 +1048,56 @@
   for (var i = 0; i < miArreglo.length; i++) {
     console.log("> Nueva iteración");
     var arregloAnidado = miArreglo[i]; // Arreglo
-    console.log("Arreglo: "+arregloAnidado);
+    console.log("Arreglo: " + arregloAnidado);
 
-    for (var j = 0; j < arregloAnidado.length; j++){
+    for (var j = 0; j < arregloAnidado.length; j++) {
       console.log(">>> Ciclo anidado");
-      console.log("Elemento: "+arregloAnidado[j]);
+      console.log("Elemento: " + arregloAnidado[j]);
       console.log(arregloAnidado[j]); // Elemento
     };
   };
   console.log("");
   for (var i = 0; i < miArreglo.length; i++) {
     var arregloAnidado = miArreglo[i]; // Arreglo
-    for (var j = 0; j < arregloAnidado.length; j++){
+    for (var j = 0; j < arregloAnidado.length; j++) {
       console.log(arregloAnidado[j]); // Elemento
     };
   };
   console.log("");
 
   // CICLOS DO WHILE
-  var x  = 16;
-  do{
+  var x = 16;
+  do {
     console.log(x);
     x++;
-  } while(x < 10);
+  } while (x < 10);
   console.log("");
 
   // BUSQUEDA DE PERFIL
   var contactos = [
     {
-      "nombre":"Nora",
-      "apellido":"Nav",
-      "numero":"0989788",
-      "gustos":["Pizza","Programacion"]
+      "nombre": "Nora",
+      "apellido": "Nav",
+      "numero": "0989788",
+      "gustos": ["Pizza", "Programacion"]
     },
     {
-      "nombre":"Harry",
-      "apellido":"Potter",
-      "numero":"8789788",
-      "gustos":["Hogwarts","Magia"]
+      "nombre": "Harry",
+      "apellido": "Potter",
+      "numero": "8789788",
+      "gustos": ["Hogwarts", "Magia"]
     },
     {
-      "nombre":"Sherlock",
-      "apellido":"Holmes",
-      "numero":"908765",
-      "gustos":["Casos interasantes","Violin"]
+      "nombre": "Sherlock",
+      "apellido": "Holmes",
+      "numero": "908765",
+      "gustos": ["Casos interasantes", "Violin"]
     }
   ];
 
-  function buscarPerfil(nombre, propiedad){
-    for(var i = 0; i < contactos.length; i++){
-      if(contactos[i].nombre === nombre){
+  function buscarPerfil(nombre, propiedad) {
+    for (var i = 0; i < contactos.length; i++) {
+      if (contactos[i].nombre === nombre) {
         return contactos[i][propiedad] || "La propiedad no existe.";
       };
     };
@@ -1111,32 +1111,32 @@
   console.log("");
 
   // NUMEROS ALEAOTORIOS
-  function generarFraccionAleatoria(){
+  function generarFraccionAleatoria() {
     return Math.random(); // Entre [0, 1)
   };
-  console.log("Numero generaro: "+generarFraccionAleatoria());
-  console.log("Numero generaro: "+generarFraccionAleatoria());
-  console.log("Numero generaro: "+generarFraccionAleatoria());
-  console.log("Numero generaro: "+generarFraccionAleatoria());
+  console.log("Numero generaro: " + generarFraccionAleatoria());
+  console.log("Numero generaro: " + generarFraccionAleatoria());
+  console.log("Numero generaro: " + generarFraccionAleatoria());
+  console.log("Numero generaro: " + generarFraccionAleatoria());
   console.log("");
 
 
   // NUMEROS ENTEROS ALEATORIOS
-  function numeroAleatorioEntre10y19(limiteSuperior){
-    return Math.floor(Math.random()*limiteSuperior);
+  function numeroAleatorioEntre10y19(limiteSuperior) {
+    return Math.floor(Math.random() * limiteSuperior);
   };
-  for(var i = 0; i < 7; i++){
+  for (var i = 0; i < 7; i++) {
     console.log(numeroAleatorioEntre10y19(200));
   };
   console.log("");
 
   // NUMEROS ENTEROS ALEATORIOS EN UN RANGO
-  function rangoAleatorio(limiteInferior, limiteSuperior){
-    return Math.floor(Math.random() *(limiteSuperior-limiteInferior +1))+limiteInferior;
+  function rangoAleatorio(limiteInferior, limiteSuperior) {
+    return Math.floor(Math.random() * (limiteSuperior - limiteInferior + 1)) + limiteInferior;
   };
-  console.log(rangoAleatorio(5,10));
-  console.log(rangoAleatorio(5,10));
-  console.log(rangoAleatorio(5,10));
+  console.log(rangoAleatorio(5, 10));
+  console.log(rangoAleatorio(5, 10));
+  console.log(rangoAleatorio(5, 10));
   console.log("");
 
   // FUNCION PARSEINT()
@@ -1146,7 +1146,7 @@
 
   var a = parseInt("5");
   var b = parseInt("7");
-  console.log(a+b);
+  console.log(a + b);
   console.log("");
 
   // FUNCION PARSEINT() CON UNA BASE
@@ -1155,37 +1155,37 @@
   console.log("");
 
   // OPERADOR CONDICIONAL (TERNARIO)
-  function retornarMinimo(x,y){
+  function retornarMinimo(x, y) {
     return x < y ? x : y;  // condicional ternario
   };
-  console.log(retornarMinimo(4,7));
-  console.log(retornarMinimo(8,2));
-  console.log(retornarMinimo(5,5));
+  console.log(retornarMinimo(4, 7));
+  console.log(retornarMinimo(8, 2));
+  console.log(retornarMinimo(5, 5));
 
   var a = 5;
   var b = 9;
-  console.log(a > b ? a+2 : b*3);
+  console.log(a > b ? a + 2 : b * 3);
   console.log("");
 
   // MULTIPLES OPERADORES CONDICIONALES
-  function compararNumeros(a,b){
-    if (a == b){
+  function compararNumeros(a, b) {
+    if (a == b) {
       return "a y b son iguales";
-    }else if(a > b){
+    } else if (a > b) {
       return "a es mayor que b";
-    }else{
+    } else {
       return "b es mayor que a";
     };
   };
 
-  function compararNumerosTernario(a,b){
-    return a == b? "a y b son iguales" 
-        : a > b? "a es mayor que b"
+  function compararNumerosTernario(a, b) {
+    return a == b ? "a y b son iguales"
+      : a > b ? "a es mayor que b"
         : "b es mayor que a";
   };
-  console.log(compararNumerosTernario(11,27));
-  console.log(compararNumerosTernario(31,27));
-  console.log(compararNumerosTernario(27,27));
+  console.log(compararNumerosTernario(11, 27));
+  console.log(compararNumerosTernario(31, 27));
+  console.log(compararNumerosTernario(27, 27));
   console.log("");
 
   // VAR vs. LET
@@ -1201,7 +1201,7 @@
   // AMBITO DE VAR vs. LET
   var miVariableGlobal = 4;
   console.log(miVariableGlobal);
-  function miFuncion(){
+  function miFuncion() {
     console.log(miVariableGlobal);
     var miVaraibleLocal = 8;
     console.log(miVaraibleLocal);
@@ -1209,18 +1209,18 @@
   miFuncion();
   console.log("");
   //console.log(miVaraibleLocal); // index.html:1210 Uncaught ReferenceError: miVaraibleLocal is not defined
-  for (var i = 0; i < 3; i++){
+  for (var i = 0; i < 3; i++) {
     console.log(i);
   };
-  console.log("variable: "+i);
+  console.log("variable: " + i);
   console.log("");
 
   // CONST DE JAVASCRIPT
   const MI_CONSTANTE = 45;
   console.log(MI_CONSTANTE);
-  function calcularAreaCircular(radio){
+  function calcularAreaCircular(radio) {
     const PI = 3.14;
-    if(radio < 0){
+    if (radio < 0) {
       return undefined;
     };
     return PI * (radio ** 2);
@@ -1230,7 +1230,7 @@
   console.log("");
 
   // MUTAR UN ARREGLO DECLARADO CON CONST
-  const MI_ARREGLO = [1,2,3,4];
+  const MI_ARREGLO = [1, 2, 3, 4];
   console.log(MI_ARREGLO);
   // MI_ARREGLO = [5,6,7,8] //Error
   MI_ARREGLO[0] = 5;
@@ -1241,36 +1241,273 @@
   console.log("");
 
   // CREAR UN OBJETO INMUTABLE
+  let colores = {
+    "verde": "#10e04b",
+    "azul": "#1b50e0",
+    "negro": "#000000",
+    "blanco": "#ffffff"
+  };
+
+  Object.freeze(colores);
+  colores.amarilo = "#fff200";
+  delete colores.verde;
+  console.log(colores);
+  console.log("");
 
   // FUNCIONES FLECHA
+  const fecha = () => new Date();
+  console.log(fecha);
+  console.log("");
 
   // FUNCIONES FLECHA CON PARAMETROS
+  const sumarTres = (x) => x + 3;
+  console.log(sumarTres(4));
+  console.log("");
+
+  const concatenar = (arr1, arr2) => arr1.concat(arr2);
+  console.log(concatenar([1, 2, 3], [4, 5, 6]));
+  console.log("");
 
   // VALORES POR DEFECTO PARA PARAMETROS
+  const incrementar = (num, valor = 1) => num + valor;
+  console.log(incrementar(2, 2));
+  console.log("");
 
   // OPERADOR REST
+  function miFuncion(...args) {
+    console.log(args.length);
+  };
+  miFuncion(1, "one", 4, [2, 3, 6]);
+  miFuncion("onega");
+  console.log("");
+
+  const su = (...args) => {
+    return args.reduce((a, b) => a + b, 0);
+  };
+  console.log("");
+
 
   // OPERADOR SPREAD
+  const numers = [1, 2, 3];
+
+  function sumar(x, y, z) {
+    return x + y + z;
+  };
+  console.log(sumar(...numers));
+  console.log("");
 
   // SINTAXIS DE DESTRUCTURACION
+  var coordenadas = {
+    l: 15,
+    z: 1
+  };
+
+  const { l, z } = coordenadas;
+  console.log(l);
+  console.log(z);
+  console.log("");
 
   // SINTAXIS DE DESTRUCTURACION: OBJETOS ANIDADOS
+  const usuario = {
+    johnDoe: {
+      edad: 27,
+      correo: "johnDoe@freecodecamp.com"
+    }
+  };
+  const { johnDoe: { edad, correo } } = usuario;
+  console.log(edad);
+  console.log(correo);
+  const { johnDoe: { edad: edadDelUsuario, correo: correoDelUsuario } } = usuario;
+  console.log(edadDelUsuario);
+  console.log(correoDelUsuario);
+  console.log("");
+
+  const PRONOSTICO_LOCAL = {
+    "ayer": {
+      minima: 61,
+      maxima: 75
+    },
+    "hoy": {
+      minima: 64,
+      maxima: 77
+    },
+    "mañana": {
+      minima: 68,
+      maxima: 80
+    }
+  };
+  const minimoHoy = PRONOSTICO_LOCAL.hoy.minima;
+  const maximaHoy = PRONOSTICO_LOCAL.hoy.maxima;
+  console.log(minimoHoy);
+  console.log(maximaHoy);
+  console.log(minimoHoy, maximaHoy);
+
+  const { hoy: { minima: minimaHoy } } = PRONOSTICO_LOCAL;
+  console.log(minimaHoy);
+  console.log("");
 
   // SINTAXIS DE DESTRUCTURACION: ARREGLOS
+  var a;
+  var b;
+  var c;
+
+  [a, b, , , c] = [1, 2, 3, 4, 5, 6]
+  console.log(a);
+  console.log(b);
+  console.log(c);
+  console.log("");
+
+  var a = 8;
+  var b = 6;
+  [b, a] = [a, b];
+  console.log("a: " + a);
+  console.log("b: " + b);
+  console.log("");
 
   // SINTAXIS DE DESTRUCTURACION CON EL OPERADOR REST
+  var a;
+  var b;
+  var arr;
+
+  [a, b, ...arr] = [1, 2, 3, 4, 5, 6, 7];
+  console.log(a);
+  console.log(b);
+  console.log(arr);
+  console.log("");
+
+  const arregloInicial = [1, 2, 3, 4, 5, 6, 7,8];
+  function removerTresPrimerosElementos(arreglo){
+    const [ , , , ...nuevoArreglo] = arreglo;
+    return nuevoArreglo;
+  };
+  const arregloFinal = removerTresPrimerosElementos(arregloInicial);
+  console.log(arregloFinal);
+  console.log("");
 
   // SINTAXIS DE DESTRUCTURACION: PASAR OBJETO COMO ARGUMENTO
+  var nuevoPerfilCliente = {
+    nombre:"Jane Doe",
+    edad: 24,
+    nacionalidad:"Española",
+    ubicacion:"España"
+  };
+  const actualizarPerfil = (informacionCliente) =>{
+    const {nombre, edad, nacionalidad, ubicacion} = nuevoPerfilCliente;
+    console.log(nombre);
+    console.log(edad);
+    console.log(nacionalidad);
+    console.log(ubicacion);
+  };
+  actualizarPerfil(nuevoPerfilCliente);
+  console.log("");
 
-  // PLANTILLAS LITERALES
+  var nuevoPerfilClienteP = {
+    nombre:"Jane Doe",
+    edad: 24,
+    nacionalidad:"Española",
+    ubicacion:"España"
+  };
+  const actualizarPerfi = ({nombre, edad}) =>{
+    console.log(nombre);
+    console.log(edad);
+
+  };
+  actualizarPerfi(nuevoPerfilClienteP);
+  console.log("");
+
+  // PLANTILLAS LITERALES (backtick)
+  var a = 6;
+  console.log(`El valor de a: es ${a}`);
+  var nam = "Nora";
+  var age = 7;
+  console.log(`Mi nombre es ${nam.toUpperCase()} y tengo ${age} años`);
+  console.log("");
+
+  var persona = {
+    nombre: "Onega",
+    edad: 28
+  };
+  const SALUDO = `¡Hola! Mi nombre es ${persona.nombre} y tengo ${persona.edad} años.`;
+  console.log(SALUDO);
+  console.log("");
 
   // CREAR OBJETOS DE FORMA CONCISA
+  const crearPersona = (nombre, edad, idioma) => {
+    return {
+      nombre:nombre,
+      edad:edad,
+      idioma:idioma
+    };
+  };
+  console.log(crearPersona("Gino",34,`Español`));
+
+  const crearPerson = (nombre, edad, idioma) => ({nombre,edad,idioma});
+  console.log(crearPerson("Alcindo",28,`Ingles`));
+  console.log("");
 
   // METODOS
+  const people = {
+    nombre:"Isabel",
+    presentarse: function(){
+      return `¡Hola! Mi nombre es ${this.nombre.toUpperCase()}`;
+    }
+  };
+  console.log(people.presentarse());
+
+  const peopl = {
+    nombre:"one",
+    presentarse() {
+      return `¡Hola! Mi nombre es ${this.nombre.toUpperCase()}`;
+    }
+  };
+  console.log(peopl.presentarse());
+  console.log("");
 
   // DEFINIR UNA CLASE
+  class TransbordadorEspecial{
+    constructor(planeta){
+      this.planeta = planeta;
+    }
+  };
+  var zeus = new TransbordadorEspecial("Jupiter");
+  console.log(zeus.planeta);
+
+  var apolo = new TransbordadorEspecial("Marte");
+  console.log(apolo.planeta);
+
+  class Mascota{
+    constructor(nombre, edad){
+      this.nombre = nombre;
+      this.edad = edad;
+    };
+  };
+  var miMascota = new Mascota("Nora", 4);
+  console.log(miMascota.nombre);
+  console.log(miMascota.edad);
+  console.log("");
 
   // GETTERS Y SETTERS
+  class Libro {
+    constructor(autor){
+      this._autor = autor;
+    };
+
+    get autor(){
+      console.log("Getter")
+      return this._autor;
+    }
+
+    set autor(nuevoAutor){
+      console.log("Setter")
+      this._autor = nuevoAutor;
+    }
+  };
+
+  const libro1 = new Libro("anonimo");
+  console.log(libro1.autor);
+  console.log("");
+  libro1.autor = "Gino Smith";
+  console.log(libro1.autor);
 
 
 
